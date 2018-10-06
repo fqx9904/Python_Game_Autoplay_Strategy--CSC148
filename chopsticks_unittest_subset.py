@@ -3,6 +3,7 @@ from unittest.mock import patch
 
 import re
 
+# only for test purpose
 # Import the student solution
 from game_interface import playable_games
 ChopsticksGame = playable_games['c']
