@@ -208,11 +208,11 @@ class Grid:
 
     def update_grid(self, player: str, letter: str) -> None:
         """
-        Update the Grid of player's claim.
+        Update the Grid of player's claim. Only for Test purpose
 
         >>> grid = Grid(1)
         >>> grid.update_grid('p1', 'A')
-        >>> print([str(cell) for cell in grid.cells])
+        >>> print([str(i) for i in grid.cells])
         ['1', 'B', 'C']
         """
         self.cells = [cell.update_cell(player, letter) for cell in self.cells]
