@@ -1,0 +1,86 @@
+== Race Registry ==
+
+Context: a system for organizing a 5K running race.
+
+When runners register, they provide their email address
+and their speed category.  A speed category indicates how quickly they
+estimate that they can finish the race.  This allows organizers to start
+the runners in groups of roughly equivalent running speed so that
+faster runners aren't stuck behind slower runners.  The possible speed
+categories are: under 20 minutes, under 30 minutes, under 40 minutes,
+and 40 minutes or over.  We need to be able get a list of runners' emails in
+a given speed category.  We also need to be able to look up a runner by email
+to find their speed category.
+
+Design and implement a class for a race registry.
+
+
+
+
+if __name__ == '__main__':
+    from lab1 import RaceRegistry
+
+    r = RaceRegistry('gerhard@mail.utoronto.ca', 'under 40 min')
+    r.register('tom@mail.utoronto.ca', 'under 30 min')
+    r.register('toni@mail.utoronto.ca', 'under 20 min')
+    r.register('margot@mail.utoronto.ca', 'under 30 min')
+    r.register('gerhard@mail.utoronto.ca', 'uner 30 min')
+
+    r.category_to_email('under 30 min')
+
+___________________________________________________________________________________________________________________________
+
+
+
+== Patient Roster ==
+
+Context: an appointment system for a doctor's office.
+
+A doctor has patients, each of whom has an OHIP number,
+family name, first name and gender.  The doctor has a limit on the number
+of patients they can take.  The doctor may have a gender balance rule:
+a limit on the difference between the number of male and female patients
+they are willing to have.  When a patient asks to register with the
+doctor, they will be successful only if the doctor is not at his or her
+limit and the patient will not violate the doctor's gender balance rule.
+Sometimes patients move, change doctors, or die, and in those cases they
+need to be removed from the doctor's list.
+
+Design and implement a class for a patient roster.
+
+== Class List ==
+
+Context: a student records system like ROSI
+
+A course has students in it. Each student is identified by a unique
+student number. There is a limit on how many students can register,
+but that limit can change.  Students are allowed to add and drop the
+course.
+
+Design and implement a class for a class list.
+
+== Player ==
+
+Context: an app for a game like 2048 or PacMan, where players get
+a score each time they play.
+
+A player has a name and a history of the last 100 scores they've
+achieved in the game.  We need to keep track of new scores they
+get so we can determine their top score and their average score
+on their most recent n games, where n is some positive whole number.
+
+Design and implement a class for a player.
+
+== Inventory Item ==
+
+Context: an inventory system
+
+Items are for sale, each one at its own price.  Items are identified
+by their item number, and they also have a text description, such as
+"bath towel".  There are categories that items belong to, such as
+"housewares" and "books".  We need to be able to print a suitable
+price tag for an item (you can decide the exact format).  Sometimes
+an item is discounted by a certain percentage.  We need to be able
+to compare two items to see which is cheaper.
+
+Design and implement a class for an inventory item.
